@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Máquina de Citas Aleatorias</title>
+
+  <!-- Font Awesome para iconos -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- US #1: contenedor -->
+  <div id="quote-box">
+    <!-- US #2 -->
+    <p id="text">Cargando...</p>
+    <!-- US #3 -->
+    <p id="author"></p>
+
+    <div class="actions">
+      <!-- US #4 -->
+      <button id="new-quote">Nueva cita</button>
+      <!-- US #5 -->
+      <a
+        id="tweet-quote"
+        href="https://twitter.com/intent/tweet"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fab fa-twitter"></i> Tuitear cita
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer profesional con iconos -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p>Desarrollado por <strong>Leandry Rivas</strong></p>
+        <p>© 2025 Rivas Technologies LLC</p>
+      </div>
+      <ul class="footer-links">
+        <li>
+          <a href="https://rivasdev.com" target="_blank">
+            <i class="fas fa-globe"></i> rivasdev.com
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/leandryr" target="_blank">
+            <i class="fab fa-github"></i> @leandryr
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/leandryrp" target="_blank">
+            <i class="fab fa-x"></i> @leandryrp
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- FCC Test Suite -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <!-- Tu lógica -->
+  <script src="script.js"></script>
+</body>
+</html>

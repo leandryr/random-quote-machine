@@ -1,0 +1,163 @@
+:root {
+  --bg: #ffffff;
+  --fg: #222222;
+  --accent: #0f0f0f;
+  --accent-dark: #e1e9e3;
+  --tweet: #1da1f2;
+  --tweet-dark: #0d95e8;
+  --radius: 8px;
+  --font: 'Segoe UI', sans-serif;
+}
+
+/* Reset y box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Altura completa + espacio para footer */
+html, body {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* US #11 */
+  padding: 1rem;
+  padding-bottom: 160px; /* deja espacio para el footer */
+  transition: background-color 1s ease;
+}
+
+/* Quote Box */
+#quote-box {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Texto y autor */
+#text {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+#author {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Botones y enlace Tweet */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.actions button,
+.actions a {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.actions button {
+  background: var(--accent);
+}
+.actions button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+.actions a {
+  background: var(--tweet);
+}
+.actions a:hover {
+  background: var(--tweet-dark);
+  transform: translateY(-2px);
+}
+
+/* Footer fijo */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 1rem 0;
+  z-index: 1000;
+}
+.footer-container {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-brand p {
+  margin: 0;
+  color: #444;
+  font-size: 0.9rem;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent);        
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s, transform 0.2s;
+}
+.footer-links a:hover {
+  color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+.footer-links i {
+  font-size: 1rem;
+}
+
+/* Responsive móvil */
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 240px;
+  }
+  .actions {
+    flex-direction: column;
+  }
+  .actions button,
+  .actions a {
+    width: 100%;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
